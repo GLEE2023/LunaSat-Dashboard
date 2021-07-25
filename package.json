@@ -1,0 +1,40 @@
+{
+    "name": "GLEE-APP",
+    "version": "0.1.0",
+    "description": "Platform for development of GLEE LunaSat Dashboard",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "install": "electron-rebuild",
+        "pack": "electron-builder --dir",
+        "dist": "electron-builder",
+        "postinstall": "electron-builder install-app-deps",
+        "rebuild": "electron-rebuild -f -w serialport"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git@github.com:GLEE2023/GLEE-APP"
+    },
+    "keywords": [
+        "Electron",
+        "quick",
+        "start",
+        "tutorial",
+        "demo"
+    ],
+    "author": "GitHub",
+    "license": "CC0-1.0",
+    "devDependencies": {
+        "electron": "^13.1.6",
+        "electron-builder": "^22.11.7",
+        "electron-packager": "^15.3.0",
+        "electron-rebuild": "^2.3.5"
+    },
+    "dependencies": {
+        "bootstrap": "^5.0.2",
+        "jquery": "^3.6.0",
+        "jquery-csv": "^1.0.21",
+        "p5": "^1.4.0",
+        "serialport": "^9.2.0"
+    }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>LunaSat Dashboard</title>
+		<link rel="stylesheet" href="./contents/bootstrap/5.0.2/css/bootstrap.min.css" />
+		<style>
+			table { border-collapse: collapse; }
+			table, th, td { border: 1px solid black; }
+		</style>
+	</head>
+
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-1 col-centered">
+					<h1>LunaSat Dashboard</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-3 col-centered">
+					<button type="button" id="refresh" class="btn btn-primary" onclick="listSerialPorts()">Refresh Ports</button>
+					<button type="button" id="setPort" class="btn btn-primary" onclick="portSelected()">Select Port</button>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-sm-8 col-centered">
+					Port Selection:
+					<form id="portDropdown">
+						<select id="selectPort"></select>
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md">
+					LunaSat Temperature
+					<div id="temperature"></div>
+				</div>
+				<div class="col-md">
+					Object Temperature
+					<div id="objectTemperature"></div>
+				</div>
+				<div class="col-md">
+					Acceleration
+					<div id="acceleration"></div>
+				</div>
+				<div class="col-md">
+					Magnetic
+					<div id="magnetic"></div>
+				</div>
+				<div class="col-md">
+					Cap
+					<div id="cap"></div>
+				</div>
+			</div>
+			<div class="row" style="padding-top:20px">
+				<div class="col-md-3">
+					<div class="col-md-6">
+						<div id = "panel1"></div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="col-md-6">
+						<div id = "panel2"></div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="col-md-6">
+						<div id = "panel3"></div>
+					</div>
+				</div>
+				<div class="col-md-3">
+					<div class="col-md-6">
+						<div id = "panel4"></div>
+					</div>
+				</div>
+				
+			</div>
+		</div>	
+		
+		<div id="error"></div>
+		<div id="ports"></div>
+		<div id="data"></div>
+		
+	</body>
+
+	<script src="./renderer.js"></script>
+	<script src="./sketch.js"></script>
+</html>
